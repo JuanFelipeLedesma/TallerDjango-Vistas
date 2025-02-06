@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Medición</title>
+</head>
+<body>
+    <h1>Formulario de Medición</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'measurement_list' %}">Volver a la lista</a>
+</body>
+</html>

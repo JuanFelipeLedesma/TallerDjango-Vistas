@@ -22,4 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('variables/', include('variables.urls')),
+        path('', views.measurement_list, name='measurement_list'),
+    path('new/', views.measurement_create, name='measurement_create'),
+    path('edit/<int:id>/', views.measurement_update, name='measurement_update'),
+    path('delete/<int:id>/', views.measurement_delete, name='measurement_delete'),
 ]

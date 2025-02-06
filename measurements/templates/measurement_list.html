@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Mediciones</title>
+</head>
+<body>
+    <h1>Lista de Mediciones</h1>
+    <a href="{% url 'measurement_create' %}">Agregar Nueva Medición</a>
+    <ul>
+        {% for measurement in measurements %}
+            <li>
+                {{ measurement.name }} - {{ measurement.value }}
+                <a href="{% url 'measurement_update' measurement.id %}">Editar</a>
+                <a href="{% url 'measurement_delete' measurement.id %}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
