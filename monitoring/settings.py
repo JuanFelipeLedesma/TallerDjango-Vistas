@@ -76,13 +76,13 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "<nombrebd>",
-        "USER": "<usuario>",
-        "PASSWORD": "<clave>",
-        "HOST": "localhost",
-        "PORT": "",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db1',  # Cambia esto por el nombre de tu BD
+        'USER': 'juanfe',  # Tu usuario de PostgreSQL
+        'PASSWORD': '12345',  # La contraseña que configuraste
+        'HOST': 'localhost',  # Servidor de la BD
+        'PORT': '5432',  # Puerto por defecto de PostgreSQL
     }
 }
 
